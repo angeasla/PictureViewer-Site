@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture Viewer - Retro Image Viewer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="terminal-container">
+      <!-- Header with ASCII Art -->
+      <div class="header">
+        <pre class="ascii-art" id="ascii-logo">
+ ____  _      _                   __     ___                        
+|  _ \(_) ___| |_ _   _ _ __ ___   \ \   / (_) _____      _____ _ __ 
+| |_) | |/ __| __| | | | '__/ _ \   \ \ / /| |/ _ \ \ /\ / / _ \ '__|
+|  __/| | (__| |_| |_| | | |  __/    \ V / | |  __/\ V  V /  __/ |   
+|_|   |_|\___|\__|\__,_|_|  \___|     \_/  |_|\___| \_/\_/ \___|_|   
+                                                                     
+            </pre
+        >
+        <div class="subtitle typing-effect">
+          <span id="typed-text"></span><span class="cursor">█</span>
+        </div>
+      </div>
+
+      <!-- Command Prompt Style Navigation -->
+      <div class="command-line">
+        <span class="prompt">C:\APPS\PICTUREVIEWER></span>
+        <span class="command">DIR</span>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <!-- About Section -->
+        <div class="section">
+          <div class="section-header">
+            <span class="bracket">[</span>ABOUT<span class="bracket">]</span>
+          </div>
+          <div class="section-content">
+            <p>
+              A nostalgic image viewer inspired by the classic pv.exe from the
+              DOS days and the BBS era.
+            </p>
+            <p>Built with JavaFX and a lot of 90s nostalgia.</p>
+            <p>
+              Features zoom, pan, directory navigation, and that authentic retro
+              feel.
+            </p>
+            <p>More features coming soon...</p>
+          </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="section">
+          <div class="section-header">
+            <span class="bracket">[</span>FEATURES<span class="bracket">]</span>
+          </div>
+          <div class="section-content">
+            <ul class="dos-list">
+              <li>► Image viewing with zoom and pan functionality</li>
+              <li>
+                ► Use the mouse wheel or pinch gesture on the touchpad to zoom
+                in/out.
+              </li>
+              <li>► Directory navigation with file browser</li>
+              <li>► Support for PNG, JPG, JPEG, GIF, BMP, WEBP formats</li>
+              <li>► Fullscreen mode for immersive viewing</li>
+              <li>► Keyboard shortcuts (Backspace for up navigation)</li>
+              <li>
+                ► Easter egg hidden feature (try ↑ ↑ ↓ ↓ ← → ← → B A in this
+                site so you can see the hint)
+              </li>
+              <li>► Authentic DOS-inspired interface</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Screenshots Section -->
+        <div class="section">
+          <div class="section-header">
+            <span class="bracket">[</span>SCREENSHOTS<span class="bracket"
+              >]</span
+            >
+          </div>
+          <div class="section-content">
+            <div class="screenshots-grid">
+              <div class="screenshot-item">
+                <div class="screenshot-placeholder">
+                  <img
+                    src="./assets/screenshot1.png"
+                    alt="main application interface"
+                  />
+                </div>
+                <div class="screenshot-caption">Main application interface</div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-placeholder">
+                  <img src="./assets/screenshot2.png" alt="full screen mode" />
+                </div>
+                <div class="screenshot-caption">Full screen mode</div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-placeholder">
+                  <img src="./assets/screenshot3.png" alt="about" />
+                </div>
+                <div class="screenshot-caption">About</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="section">
+          <div class="section-header">
+            <span class="bracket">[</span>DOWNLOAD<span class="bracket">]</span>
+          </div>
+          <div class="section-content">
+            <div class="download-info">
+              <p>Version 1.0.0 - Latest Release</p>
+            </div>
+            <div class="download-buttons">
+              <a
+                href="https://github.com/angeasla/PictureViewer/releases/download/v1.0.0/PictureViewer-1.0.0.deb"
+                class="dos-button"
+                id="deb-btn"
+              >
+                <span class="button-icon">📦</span>
+                DOWNLOAD .DEB
+                <div class="button-subtitle">For Debian/Ubuntu</div>
+              </a>
+              <a
+                href="https://github.com/angeasla/PictureViewer/releases/download/v1.0.0/PictureViewer-1.0.0.exe"
+                class="dos-button"
+                id="exe-btn"
+              >
+                <span class="button-icon">💾</span>
+                DOWNLOAD .EXE
+                <div class="button-subtitle">For Windows</div>
+              </a>
+              <a
+                href="https://github.com/angeasla/PictureViewer/releases/download/v1.0.0/PictureViewer-1.0.0.msi"
+                class="dos-button"
+                id="msi-btn"
+              >
+                <span class="button-icon">🔧</span>
+                DOWNLOAD .MSI
+                <div class="button-subtitle">Windows Installer</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Requirements -->
+        <div class="section">
+          <div class="section-header">
+            <span class="bracket">[</span>SYSTEM REQUIREMENTS<span
+              class="bracket"
+              >]</span
+            >
+          </div>
+          <div class="section-content">
+            <ul class="dos-list">
+              <li>► Windows 10+ / Ubuntu 18.04+ / Debian 10+</li>
+              <li>► 512MB RAM minimum</li>
+              <li>► 100MB disk space</li>
+              <li>► No Java installation required (runtime included)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <div class="command-line">
+            <span class="prompt">C:\APPS\PICTUREVIEWER></span>
+            <span class="command"
+              >ECHO "Developed by Angelos Aslanidis with a lot of 90s
+              nostalgia"</span
+            >
+          </div>
+          <div class="footer-links">
+            <a
+              href="https://github.com/angeasla/PictureViewer"
+              class="footer-link"
+            >
+              [VIEW SOURCE CODE]
+            </a>
+            <a
+              href="https://github.com/angeasla/PictureViewer/issues"
+              class="footer-link"
+            >
+              [REPORT BUGS]
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

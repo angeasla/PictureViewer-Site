@@ -1,0 +1,346 @@
+/* Import DOS-style fonts */
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier Prime", "Share Tech Mono", "Courier New", monospace;
+  background-color: #000000;
+  color: #00ff00;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+/* Terminal container */
+.terminal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Header and ASCII Art */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  border: 2px solid #00ff00;
+  padding: 20px;
+  background-color: #001100;
+}
+
+.ascii-art {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #00ff41;
+  text-shadow: 0 0 10px #00ff41;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 10px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00ff41;
+  }
+  to {
+    text-shadow: 0 0 20px #00ff41, 0 0 30px #00ff41;
+  }
+}
+
+/* Typing effect */
+.subtitle {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Command line styling */
+.command-line {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #000080;
+  border: 1px solid #0000ff;
+}
+
+.prompt {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.command {
+  color: #ffff00;
+  margin-left: 5px;
+}
+
+/* Content sections */
+.content {
+  margin-top: 30px;
+}
+
+.section {
+  margin-bottom: 40px;
+  border: 1px solid #00aa00;
+  background-color: #000a00;
+}
+
+.section-header {
+  background-color: #004400;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #00ff00;
+  border-bottom: 1px solid #00aa00;
+}
+
+.bracket {
+  color: #ffff00;
+  font-weight: bold;
+}
+
+.section-content {
+  padding: 20px;
+}
+
+.section-content p {
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+/* DOS-style lists */
+.dos-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dos-list li {
+  margin-bottom: 8px;
+  color: #cccccc;
+  font-family: "Courier New", monospace;
+}
+
+/* Screenshots grid */
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.screenshot-item {
+  text-align: center;
+}
+
+.screenshot-item img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: contain;
+  object-position: center;
+  border: 2px solid #666666;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  background-color: #001100;
+}
+
+.screenshot-item img:hover {
+  border-color: #00ff00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.screenshot-caption {
+  color: #00ff00;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Download section */
+.download-info {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #ffff00;
+  font-weight: bold;
+}
+
+.download-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* DOS-style buttons */
+.dos-button {
+  display: block;
+  padding: 15px 20px;
+  background-color: #000080;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #0000ff;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dos-button:hover {
+  background-color: #0000aa;
+  border-color: #00ffff;
+  color: #00ffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+}
+
+.dos-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 255, 255, 0.3);
+}
+
+.button-icon {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.button-subtitle {
+  font-size: 10px;
+  color: #cccccc;
+  margin-top: 5px;
+}
+
+.dos-button:hover .button-subtitle {
+  color: #ffffff;
+}
+
+/* Scan line effect */
+.dos-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.dos-button:hover::before {
+  left: 100%;
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px solid #004400;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: #00aa00;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: 1px solid #004400;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #00ff00;
+  border-color: #00ff00;
+  background-color: #001100;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .terminal-container {
+    padding: 10px;
+  }
+
+  .ascii-art {
+    font-size: 8px;
+  }
+
+  .download-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ascii-art {
+    font-size: 6px;
+  }
+
+  .section-content {
+    padding: 15px;
+  }
+}
+
+/* Retro CRT effect (optional) */
+@media (min-width: 1024px) {
+  .terminal-container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 1000;
+  }
+}
